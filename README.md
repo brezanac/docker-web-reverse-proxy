@@ -1,6 +1,6 @@
 # docker-amp-template
 
-A simple HTTP/HTTPS reverse proxy, based on [Traefik](https://traefik.io/).
+A simple HTTP/TCP reverse proxy, based on [Traefik](https://traefik.io/).
 
 ## Usage
 
@@ -14,17 +14,6 @@ git clone https://github.com/brezanac/docker-web-reverse-proxy.git web-reverse-p
 ### Configuring the environmental variables file (.env) ###
 
 Rename `.env.example` to `.env` and set a new value for `COMPOSE_PROJECT_NAME` if you need to. 
-
-**IMPORTANT:** If you use [docker-amp-template](https://github.com/brezanac/docker-amp-template) for your project you need to preserve the default value for `COMPOSE_PROJECT_NAME` which is `web-reverse-proxy`.
-
-### Creating a Docker network for public proxy requests ###
-In order for the reverse proxy to be able to receive requests from other services (containers) you need to manually create a new Docker network.
-
-```
-docker network create web-reverse-proxy
-```
-
-Please note that you need to do this **only once**!
 
 ### Running docker-compose ###
 
@@ -42,7 +31,7 @@ If you do not want the service to restart automatically you can disable that beh
 
 ## Requirements
 
-Docker 17.04.0+ or newer.
+Docker 17.12.0 or newer.
 
 ## License
 

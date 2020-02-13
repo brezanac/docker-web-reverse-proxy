@@ -1,10 +1,15 @@
-version: '3.2'
+version: '3.5'
 
 services:
     proxy:
-        image: traefik
-        container_name: web-reverse-proxy
-        command: --api --docker --docker.domain=docker.localhost --logLevel=DEBUG
+        image: traefik:latest
+        container_name: traefik_reverse_proxy
+        command: 
+            - "--log.level=ERROR"
+            - "--api.insecure=true"
+            - "--providers.docker=true"
+            - "--providers.docker.exposedbydefault=false"
+            - "--entrypoints.web.address=:80"
         networks:
             - public
         ports:
@@ -12,10 +17,10 @@ services:
             - "8080:8080"
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
-            - /dev/null:/traefik.toml
         restart: unless-stopped
 
 networks:
     public:
+        name: traefik_public
         driver: bridge
 

@@ -1,4 +1,4 @@
-# docker-amp-template
+# docker-web-reverse-proxy
 
 A simple HTTP/TCP reverse proxy, based on [Traefik](https://traefik.io/).
 
@@ -33,6 +33,6 @@ If you do not want the service to restart automatically you can disable that beh
 
 Docker 17.12.0 or newer.
 
-## License
+## License ##
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -4,18 +4,18 @@ A simple HTTP/TCP reverse proxy, based on [Traefik](https://traefik.io/).
 
 ## Usage
 
-### Cloning the repository ###
+### Cloning the repository
 Clone the repository to your machine.
 
 ```
 git clone https://github.com/brezanac/docker-web-reverse-proxy.git web-reverse-proxy
 ```
 
-### Configuring the environmental variables file (.env) ###
+### Configuring the environmental variables file (.env)
 
 Rename `.env.example` to `.env` and set a new value for `COMPOSE_PROJECT_NAME` if you need to. 
 
-### Running docker-compose ###
+### Running docker-compose
 
 Run Docker Compose within the newly created folder by specifying the `-d` argument, which will make the container run in the background (detached mode).
 
